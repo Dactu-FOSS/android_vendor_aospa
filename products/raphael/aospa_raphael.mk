@@ -1,0 +1,34 @@
+#
+# Copyright (C) 2021-2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+ifeq (aospa_raphael,$(TARGET_PRODUCT))
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from the AOSPA configuration.
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
+
+# Inherit from raphael device
+$(call inherit-product, device/xiaomi/raphael/device.mk)
+
+PRODUCT_NAME := aospa_raphael
+PRODUCT_DEVICE := raphael
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Mi 9T Pro
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="raphael-user 11 RKQ1.200826.002 V12.5.2.0.RFKMIXM release-keys" \
+    BuildFingerprint=Xiaomi/raphael/raphael:11/RKQ1.200826.002/V12.5.2.0.RFKMIXM:user/release-keys
+
+endif
