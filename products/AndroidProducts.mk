@@ -38,7 +38,7 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/surya/aospa_surya.mk \
     $(LOCAL_DIR)/raphael/aospa_raphael.mk \
     $(LOCAL_DIR)/tissot/aospa_tissot.mk \
-    $(LOCAL_DIR)/topaz/aston_topaz.mk \
+    $(LOCAL_DIR)/topaz/aospa_topaz.mk \
     $(LOCAL_DIR)/santoni/aospa_santoni.mk \
     $(LOCAL_DIR)/aston/aospa_aston.mk 
 
